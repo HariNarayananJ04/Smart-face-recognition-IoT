@@ -1,8 +1,6 @@
-<h1 align="center">🧠 Smart Face Recognition System</h1>
+# 🧠 Smart Face Recognition System
 
-<p align="center">
-  <img src="https://media.tenor.com/NOYF3f82b_gAAAAC/iron-man-jarvis.gif" width="700" alt="Jarvis HUD"/>
-</p>
+
 
 <p align="center">
   <b>AI-powered Face Recognition project built using Python and OpenCV ⚙️</b>
@@ -11,19 +9,20 @@
 ---
 
 ## 📖 Overview
-This project is a **Smart Face Recognition System** developed in **Python** using **OpenCV** and **LBPH (Local Binary Pattern Histogram)** algorithm.  
 
+This project is a **Smart Face Recognition System** developed in **Python** using **OpenCV** and the **LBPH (Local Binary Pattern Histogram)** algorithm.  
 It captures human faces, trains a recognition model, and identifies individuals through a live webcam feed.  
 The system is lightweight, accurate, and works efficiently in real-time environments.
 
 ---
 
 ## 🧩 Features
-- 👁️ Real-time **Face Detection & Recognition**
-- ⚙️ Uses **Haar Cascade Classifier** for detecting faces
-- 🧠 Trains model using **LBPH Algorithm**
-- 🧾 Generates unique dataset for each person
-- 💡 Modular Python code (well-structured and easy to understand)
+
+- 👁️ Real-time **Face Detection & Recognition**  
+- ⚙️ Uses **Haar Cascade Classifier** for detecting faces  
+- 🧠 Trains model using **LBPH Algorithm**  
+- 🧾 Generates unique dataset for each person  
+- 💡 Modular Python code (clean and easy to understand)
 
 ---
 
@@ -38,89 +37,116 @@ The system is lightweight, accurate, and works efficiently in real-time environm
 
 ## 🗂️ Project Structure
 
+```
 Smart-Face-Recognition-IoT/
 │
 ├── src/
-│ ├── Readface.py # Captures face images & stores dataset
-│ ├── Train.py # Trains LBPH model using captured data
-│ ├── Detectface.py # Recognizes faces in real-time using webcam
+│   ├── Readface.py        -> Captures face images & stores dataset
+│   ├── Train.py           -> Trains LBPH model using captured data
+│   ├── Detectface.py      -> Recognizes faces in real-time using webcam
 │
 ├── data/
-│ ├── haarcascade_frontalface_default.xml # Face detection model
-│ └── hh.xml
+│   ├── haarcascade_frontalface_default.xml  -> Face detection model
+│   └── hh.xml
 │
 ├── models/
-│ ├── trainer.yml # Trained model file (auto-generated)
-│ └── name_labels.txt # Mapping of labels ↔ names
+│   ├── trainer.yml        -> Trained model file (auto-generated)
+│   └── name_labels.txt    -> Mapping of labels ↔ names
 │
-├── dataset/ # Automatically created folder for face images
-│ └── Profile.csv
+├── dataset/               -> Automatically created folder for face images
+│   └── Profile.csv
 │
-├── requirements.txt # Python dependencies
-├── .gitignore # Ignore unnecessary files
-└── README.md # Documentation\
+├── requirements.txt       -> Python dependencies
+├── .gitignore             -> Files to ignore during upload
+└── README.md              -> Documentation file
+```
 
 ---
 
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the Repository
-``bash
-git clone https://github.com/HariNarayananJ04/Smart-Face-Recognition-IoT.git
-cd Smart-Face-Recognition-IoT 
+```bash
+git clone https://github.com/HariNarayananJ04/Smart-face-recognition-IoT.git
+cd Smart-face-recognition-IoT
+```
 
-2️⃣ Install Dependencies
+### 2️⃣ Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
-3️⃣ Capture Face Images
-
-Run the following to capture your dataset:
+### 3️⃣ Capture Face Images
+Run this command to capture your dataset:
+```bash
 python src/Readface.py
+```
 
--Captures ~60 grayscale images per person
--Stores them in dataset/ folder
--Adds your name to Profile.csv
+- Captures ~60 grayscale images per person  
+- Stores them in the `dataset/` folder  
+- Adds your name to `Profile.csv`
 
-4️⃣ Train the Model
-
+### 4️⃣ Train the Model
+```bash
 python src/Train.py
+```
 
-This will generate the trained model file trainer.yml under models/.
+- Generates a trained model file `trainer.yml` under `models/`.
 
-5️⃣ Recognize Faces
+### 5️⃣ Recognize Faces
 Run:
+```bash
 python src/Detectface.py
+```
 
-The system will open your webcam
-Detect and recognize faces using the trained model
-Display the recognized person’s name with a confidence score
+- Opens your webcam  
+- Detects and recognizes faces using the trained model  
+- Displays the recognized person’s name with confidence level
 
-🎯 Real-World Applications
+---
 
-🏫Smart Attendance Systems
-🏢 Secure Office Entry
-🏠 Smart Home Face Recognition
-🚪 Visitor Identification Systems
+## 🎯 Real-World Applications
 
-📊 Tech Stack
-Category            	Tools / Tech
-Languages           	Python
-Libraries	            OpenCV, NumPy, Pillow
-Algorithm	            Haar Cascade + LBPH
-IDE                   VS Code / PyCharm
-OS Tested	            Windows 10 / 11
+- 🏫 Smart Attendance Systems  
+- 🏢 Secure Office Entry Systems  
+- 🏠 Smart Home Face Recognition  
+- 🚪 Visitor Identification Systems  
 
-🧠 Working Flow
+---
 
+## 📊 Tech Stack
+
+| Category | Tools / Tech |
+|-----------|--------------|
+| **Languages** | Python |
+| **Libraries** | OpenCV, NumPy, Pillow |
+| **Algorithm** | Haar Cascade + LBPH |
+| **IDE** | VS Code / PyCharm |
+| **OS Tested** | Windows 10 / 11 |
+
+---
+
+## 🧠 Working Flow
+
+```
 [ Capture Face ] → [ Train Model ] → [ Recognize Face ]
+```
 
-⚡ Fun Fact
-I don’t chase recognition...
-I code it 😎
+---
 
-📬 Connect with Me
-📧 Email: harinarayananbecse@gmail.com
-💼 LinkedIn: www.linkedin.com/in/hari-narayanan-j-be
-💻 GitHub: github.com/yourusername
+## ⚡ Fun Fact
 
-<h3 align="center">🛰️ End of Transmission — Jarvis Mode: Active ⚙️</h3> ```
+> I don’t chase recognition...  
+> I *code* it 😎  
+
+---
+
+## 📬 Connect with Me
+
+📧 **Email:** [harinarayananbecse@gmail.com](mailto:harinarayananbecse@gmail.com)  
+💼 **LinkedIn:** [www.linkedin.com/in/hari-narayanan-j-be](https://www.linkedin.com/in/hari-narayanan-j-be)  
+💻 **GitHub:** [github.com/yourusername](https://github.com/yourusername)
+
+---
+
+<h3 align="center">🛰️ End of Transmission ⚙️</h3>
